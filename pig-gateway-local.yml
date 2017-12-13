@@ -49,7 +49,7 @@ zuul:
     policies:
       pig-admin-service:
         limit: 100
-        quota: 1
+        quota: 100
         refresh-interval: 3
   
 security:
