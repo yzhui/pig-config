@@ -6,7 +6,12 @@ redis:
     expiration: 3600
 
 # datasoure默认使用JDBC
-spring: 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: lengleng
+    url: jdbc:mysql://123.206.94.20:3356/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
   redis:
     host: 127.0.0.1
     port: 6379
