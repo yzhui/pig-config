@@ -71,7 +71,7 @@ filter:
   urls:
     anon:
       - /auth/**
-      - /admin/user/code/*
+      - /admin/code/*
 
       
 server:
