@@ -71,6 +71,8 @@ filter:
   urls:
     anon:
       - /auth/**
+      - /admin/user/code/*
+
       
 server:
   port: 9999
