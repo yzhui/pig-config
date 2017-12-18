@@ -10,8 +10,8 @@ spring:
   rabbitmq:
     host: 123.206.94.20
     port: 5672
-    username: lengleng
-    password: lengleng
+    username: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
+    password: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
     
 hystrix:
   command:
@@ -53,6 +53,8 @@ zuul:
         refresh-interval: 3
   
 security:
+  login:
+    url: /auth/oauth/token
   sessions: stateless
   oauth2:
     resource:
