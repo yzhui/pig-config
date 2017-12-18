@@ -71,7 +71,6 @@ filter:
   urls:
     anon:
       - /auth/**
-      - /auth/**
       
 server:
   port: 9999
