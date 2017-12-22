@@ -22,6 +22,10 @@ hystrix:
             timeoutInMilliseconds: 30000
 
 ribbon:
+  Httpclient:
+    enable: false
+  OkHttp:
+    enable: true
   ReadTimeout: 30000
   ConnectTimeout: 30000
 
