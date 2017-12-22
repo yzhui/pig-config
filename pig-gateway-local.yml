@@ -28,6 +28,12 @@ ribbon:
     enable: true
   ReadTimeout: 30000
   ConnectTimeout: 30000
+  
+feign:
+  okhttp:
+    enable: true
+  httpclient:
+    enable: false
 
 zuul:
   ignoredServices: '*'
