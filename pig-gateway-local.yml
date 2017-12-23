@@ -63,6 +63,8 @@ zuul:
         refresh-interval: 3
   
 security:
+  validate:
+    code: false
   sessions: stateless
   oauth2:
     resource:
@@ -80,7 +82,6 @@ filter:
     anon:
       - /auth/**
       - /admin/code/*
-
       
 server:
   port: 9999
