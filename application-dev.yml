@@ -3,7 +3,8 @@ jasypt:
   encryptor:
     password: lengleng
 
-redis:
+spring:
+  redis:
     host: 127.0.0.1
     port: 6379
     password: ENC(pr0Ohcnc2rcqFjM/8OCjPA==)
