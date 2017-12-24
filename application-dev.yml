@@ -1,6 +1,3 @@
-spring:
-  profiles: dev
-
 #eureka配置
 eureka:
   instance:
