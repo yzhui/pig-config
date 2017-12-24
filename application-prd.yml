@@ -1,0 +1,27 @@
+#加密配置
+jasypt:
+  encryptor:
+    password: lengleng
+
+redis:
+    host: 123.206.94.20
+    port: 6379
+    password: ENC(pr0Ohcnc2rcqFjM/8OCjPA==)
+  http:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+ribbon:
+  Httpclient:
+    enable: false
+  OkHttp:
+    enable: true
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  
+feign:
+  okhttp:
+    enable: true
+  httpclient:
+    enable: false
