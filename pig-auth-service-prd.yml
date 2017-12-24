@@ -1,0 +1,36 @@
+server:
+  port: 3000
+
+pig:
+  auth:
+    clientId: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
+    clientSecret: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
+    scope: server
+    
+ribbon:
+  Httpclient:
+    enable: false
+  OkHttp:
+    enable: true
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  
+feign:
+  okhttp:
+    enable: true
+  httpclient:
+    enable: false
+    
+spring:
+  redis:
+    host: 123.206.94.20
+    port: 6379
+    password: ENC(pr0Ohcnc2rcqFjM/8OCjPA==)
+#加密参数
+jasypt:
+  encryptor:
+    password: lengleng
+    
+logging:
+  config: classpath:logback.xml
+

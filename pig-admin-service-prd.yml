@@ -1,0 +1,73 @@
+server:
+  port: 4000
+#Redis cache 过期时间设置
+redis:
+  cache:
+    expiration: 3600
+
+# datasoure默认使用JDBC
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: lengleng
+    url: jdbc:mysql://123.206.94.20:3356/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+  redis:
+    host: 123.206.94.20
+    port: 6379
+    password: ENC(pr0Ohcnc2rcqFjM/8OCjPA==)
+  rabbitmq:
+    host: 123.206.94.20
+    port: 5672
+    username: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
+    password: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
+  http:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      
+ribbon:
+  Httpclient:
+    enable: false
+  OkHttp:
+    enable: true
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  
+feign:
+  okhttp:
+    enable: true
+  httpclient:
+    enable: false
+#mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.github.pig.admin.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 1
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+#加密配置
+jasypt:
+  encryptor:
+    password: lengleng
+
+qiniu:
+  accessKey: hM2cBDEM0FTYzpXbigRW90kV12NhhzhFM3jCzurJ
+  secretKey: ENC(HM/K0KmtFoZSBhGDEA0Ez71ePTncZlQ954DfLNMZuOftKZq+2WR+dCXH9QEsf768q9wwd92RXLE=)
+  bucket: pigcloud
+  host: http://p0hpm86wj.bkt.clouddn.com/
+    
+logging:
+  config: classpath:logback.xml
+
