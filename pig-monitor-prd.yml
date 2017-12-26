@@ -7,7 +7,7 @@ spring:
     port: 5672
     username: lengleng
     password: lengleng
-  boot:
+    boot:
     admin:
       turbine:
         location: pig-monitor
