@@ -26,3 +26,13 @@ feign:
     enable: true
   httpclient:
     enable: false
+    
+#监控短点配置
+management:
+  security:
+    enabled: false
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: false
