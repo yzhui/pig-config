@@ -60,6 +60,9 @@ filter:
       - /auth/**
       - /admin/code/*
       - /swagger-ui.html
+      - /v2/api-docs
+      - /webjars/** 
+      - /favicon.ico
        
 logging:
   config: classpath:logback.xml
