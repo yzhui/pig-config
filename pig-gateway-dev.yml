@@ -62,8 +62,8 @@ filter:
       - /swagger-resources/**
       - /swagger-ui.html
       - /v2/api-docs
-      - /webjars/** 
-      - /favicon.ico
+      - /swagger/api-docs
+      - /webjars/**
        
 logging:
   config: classpath:logback.xml
