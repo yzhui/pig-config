@@ -59,6 +59,7 @@ filter:
     anon:
       - /auth/**
       - /admin/code/*
+      - /swagger-resources/**
       - /swagger-ui.html
       - /v2/api-docs
       - /webjars/** 
