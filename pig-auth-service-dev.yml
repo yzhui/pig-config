@@ -14,7 +14,7 @@ security:
       loadBalanced: true
       user-info-uri: http://pig-auth-service/user
       prefer-token-info: true
-      service-id: pig-gateway
+      service-id: pig-auth-service
     
 logging:
   config: classpath:logback.xml
