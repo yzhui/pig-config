@@ -51,7 +51,7 @@ security:
     resource:
       loadBalanced: true
       user-info-uri: http://pig-auth-service/user
-      prefer-token-info: false
+      prefer-token-info: true
       service-id: pig-gateway
     
 filter:
