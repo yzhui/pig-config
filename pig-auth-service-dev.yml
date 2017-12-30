@@ -6,6 +6,7 @@ pig:
     clientId: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
     clientSecret: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
     scope: server
+
     
 logging:
   config: classpath:logback.xml
