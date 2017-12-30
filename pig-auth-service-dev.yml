@@ -13,7 +13,7 @@ security:
     resource:
       loadBalanced: true
       user-info-uri: http://pig-auth-service/user
-      prefer-token-info: true
+      prefer-token-info: false
       service-id: pig-auth-service
     
 logging:
