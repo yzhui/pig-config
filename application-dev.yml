@@ -5,6 +5,7 @@ jasypt:
 
 spring:
   redis:
+    remote: true        #是否是cachecloud 获取
     host: 127.0.0.1
     port: 6379
     password: ENC(pr0Ohcnc2rcqFjM/8OCjPA==)
@@ -12,6 +13,10 @@ spring:
     multipart:
       max-file-size: 1000MB
       max-request-size: 1000MB
+
+cache:
+  redis:
+    expiration: 3601
 
 ribbon:
   Httpclient:
