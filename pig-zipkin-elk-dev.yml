@@ -12,6 +12,7 @@ spring:
 
 zipkin:
   storage:
+    StorageComponent: elasticsearch
     type: elasticsearch
     elasticsearch:
       hosts: 218.70.11.118:9201
