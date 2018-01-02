@@ -14,7 +14,7 @@ zipkin:
   storage:
     type: elasticsearch
     elasticsearch:
-      hosts: 123.206.94.20:9000:9200
+      hosts: 123.206.94.20:9200
       cluster: elasticsearch
       index: zipkin
       max-requests: 64
