@@ -12,11 +12,10 @@ spring:
 
 zipkin:
   storage:
-    StorageComponent: elasticsearch
     type: elasticsearch
     elasticsearch:
       hosts: 218.70.11.118:9201
-      # cluster: elasticsearch
+      cluster: elasticsearch
       index: zipkin
       max-requests: 64
       index-shards: 5
