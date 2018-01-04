@@ -7,12 +7,12 @@ spring:
     port: 5682
     username: pig
     password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
-  zipkin:
-      base-url: http://localhost:5002
-  sleuth:
-    enabled: true
-    sampler:
-      percentage: 1
+  # zipkin:
+  #     base-url: http://localhost:5002
+  # sleuth:
+  #   enabled: true
+  #   sampler:
+  #     percentage: 1
     
 hystrix:
   command:
