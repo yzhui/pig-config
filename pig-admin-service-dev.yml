@@ -10,13 +10,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: lengleng
-    url: jdbc:mysql://123.206.94.20:3356/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
+    url: jdbc:mysql://106.14.69.75:3356/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
   rabbitmq:
     host: 123.206.94.20
-    port: 5672
-    username: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
-    password: ENC(7/5Zi1aQY/I7GACnfdVbpR1JtTrkM2Sa)
+    port: 5682
+    username: ENC(lNOj5ccVMfZvL7MbDZ45ew==)
+    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
   zipkin:
       base-url: http://localhost:5002
   sleuth:

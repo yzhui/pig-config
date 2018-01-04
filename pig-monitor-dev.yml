@@ -3,10 +3,10 @@ server:
 
 spring:
   rabbitmq:
-    host: 123.206.94.20
-    port: 5672
-    username: lengleng
-    password: lengleng
+    host: 106.14.69.75
+    port: 5682
+    username: pig
+    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
   zipkin:
       base-url: http://localhost:5002
   sleuth:

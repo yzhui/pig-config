@@ -5,16 +5,16 @@ spring:
   sleuth:
     enabled: false
   rabbitmq:
-    host: 123.206.94.20
-    port: 5672
-    username: lengleng
-    password: lengleng
+    host: 106.14.69.75
+    port: 5682
+    username: pig
+    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
 
 zipkin:
   storage:
     type: elasticsearch
     elasticsearch:
-      hosts: 218.70.11.118:9201
+      hosts: 106.14.69.75:9201
       cluster: elasticsearch
       index: zipkin
       max-requests: 64
