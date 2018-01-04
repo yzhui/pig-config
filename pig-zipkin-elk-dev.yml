@@ -7,8 +7,8 @@ spring:
   rabbitmq:
     host: 106.14.69.75
     port: 5682
-    username: ENC(8VKLl6rejywW+Dch+2S4Fg==)
-    password: ENC(8VKLl6rejywW+Dch+2S4Fg==)
+    username: pig
+    password: lengleng
 
 zipkin:
   storage:
