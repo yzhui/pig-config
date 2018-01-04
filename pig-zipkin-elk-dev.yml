@@ -7,7 +7,7 @@ spring:
   rabbitmq:
     host: 106.14.69.75
     port: 5682
-    username: pig
+    username: ENC(lNOj5ccVMfZvL7MbDZ45ew==)
     password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
 
 zipkin:
