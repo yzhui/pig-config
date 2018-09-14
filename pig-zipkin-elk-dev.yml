@@ -1,20 +1,17 @@
 server:
   port: 5002
 
-spring:
-  sleuth:
-    enabled: false
-  rabbitmq:
-    host: 106.14.69.75
-    port: 5682
-    username: pig
-    password: lengleng
-
 zipkin:
+  collector:
+    rabbitmq:
+      addresses: 127.0.0.1:5682
+      password: password
+      username: root
+      queue: zipkin
   storage:
     type: elasticsearch
     elasticsearch:
-      hosts: 106.14.69.75:9201
+      hosts: 127.0.0.1:9200
       cluster: elasticsearch
       index: zipkin
       max-requests: 64

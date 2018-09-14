@@ -2,74 +2,60 @@ server:
   port: 9999
 
 spring:
-  rabbitmq:
-    host: 106.14.69.75
-    port: 5682
-    username: pig
-    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
-  # zipkin:
-  #     base-url: http://localhost:5002
-  # sleuth:
-  #   enabled: true
-  #   sampler:
-  #     percentage: 1
-    
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 30000
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      percentage: 0.2
 
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+      clients: pig-auth,pig-upms-service,pig-demo-service
   ignoredServices: '*'
   host:
-    connect-timeout-millis: 30000
-    socket-timeout-millis: 30000
-  routes:
-    auth-service:
-      path: /auth/**
-      serviceId: pig-auth-service
-      stripPrefix: true
-      sensitiveHeaders:
-    pig-admin-service:
-      path: /admin/**
-      serviceId: pig-admin-service
-      stripPrefix: true
-      sensitiveHeaders:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
   ratelimit:
-    key-prefix: pig-ratelimite 
-    enabled: true 
-    repository: REDIS 
+    key-prefix: pig-ratelimite
+    enabled: true
+    repository: REDIS
     behind-proxy: true
     policies:
-      pig-admin-service:
+      pig-upms-service:
         limit: 100
         quota: 100
         refresh-interval: 3
 
 security:
+  encode:
+    key: '1234567887654321' #必须16位
   validate:
-    code: false
+    code: true
+    preview: false
   sessions: stateless
   oauth2:
+    client:
+      client-id: pig
+      client-secret: pig
     resource:
-      loadBalanced: true
-      user-info-uri: http://pig-auth-service/user
-      prefer-token-info: false
-      service-id: pig-gateway
+      jwt:
+         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
-filter:
+ignore:
   urls:
-    anon:
-      - /auth/**
-      - /admin/code/*
-      - /swagger-resources/**
-      - /swagger-ui.html
-      - /*/v2/api-docs
-      - /swagger/api-docs
-      - /webjars/**
-       
-logging:
-  config: classpath:logback.xml
+    - /mobile/**
+    - /auth/**
+    - /admin/code/*
+    - /admin/smsCode/*
+    - /admin/user/info
+    - /admin/menu/userMenu
+    - /swagger-resources/**
+    - /swagger-ui.html
+    - /*/v2/api-docs
+    - /swagger/api-docs
+    - /webjars/**
+  clients:
+    - app
